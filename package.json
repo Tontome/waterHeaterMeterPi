@@ -9,6 +9,7 @@
   "author": "Tontome",
   "license": "ISC",
   "dependencies": {
+    "https": "^1.0.0",
     "onoff": "^5.0.1"
   }
 }
