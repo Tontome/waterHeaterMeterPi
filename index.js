@@ -11,7 +11,7 @@
 
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
 var pulseLED = new Gpio(27, 'out'); //use GPIO pin 4 as output
-var pulseWatcher = new Gpio(4, 'in', 'both');
+var pulseWatcher = new Gpio(17, 'in', 'both');
 var pulseCounter = 0;
 console.log("Water Heater Meter Started  !");
 
@@ -31,7 +31,7 @@ pulseWatcher.watch(function (err, value) { //Watch for hardware interrupts on pu
   }
   //pulseLED.writeSync(value); //turn LED on or off depending on the button state (0 or 1)
   pulseCounter++;
-  console.log({"timestamp": now.toISOString(), "Pulse counter" : pulseCounter});
+//  console.log({"timestamp": now.toISOString(), "Pulse counter" : pulseCounter});
  
 });
 
